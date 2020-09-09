@@ -1,271 +1,314 @@
 theme: jekyll-theme-dinky
-# User interface text and labels
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
 
-# English (default)
-# -----------------
-en: &DEFAULT_EN
-  page                       : "Page"
-  pagination_previous        : "Previous"
-  pagination_next            : "Next"
-  breadcrumb_home_label      : "Home"
-  breadcrumb_separator       : "/"
-  toc_label                  : "On This Page"
-  ext_link_label             : "Direct Link"
-  less_than                  : "less than"
-  minute_read                : "minute read"
-  share_on_label             : "Share on"
-  meta_label                 :
-  tags_label                 : "Tags:"
-  categories_label           : "Categories:"
-  date_label                 : "Published:"
-  comments_label             : "Leave a Comment"
-  comments_title             : "Comments"
-  more_label                 : "Learn More"
-  related_label              : "You May Also Enjoy"
-  follow_label               : "Follow:"
-  feed_label                 : "Feed"
-  powered_by                 : "Powered by"
-  website_label              : "Website"
-  email_label                : "Email"
-  recent_posts               : "Recent Posts"
-  undefined_wpm              : "Undefined parameter words_per_minute at _config.yml"
-  comment_form_info          : "Your email address will not be published. Required fields are marked"
-  comment_form_comment_label : "Comment"
-  comment_form_md_info       : "Markdown is supported."
-  comment_form_name_label    : "Name"
-  comment_form_email_label   : "Email address"
-  comment_form_website_label : "Website (optional)"
-  comment_btn_submit         : "Submit Comment"
-  comment_btn_submitted      : "Submitted"
-  comment_success_msg        : "Thanks for your comment! It will show on the site once it has been approved."
-  comment_error_msg          : "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again."
-  loading_label              : "Loading..."
-en-US:
-  <<: *DEFAULT_EN
-en-CA:
-  <<: *DEFAULT_EN
-en-GB:
-  <<: *DEFAULT_EN
-en-AU:
-  <<: *DEFAULT_EN
+# Site Settings
+locale                   : "en-US"
+title                    : "paul / 个人主页"
+title_separator          : "-"
+name                     : &name "paul"
+description              : &description "一个努力搬砖的科研dog~~"
+url                      : https://paulghub.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "paulghub/PaulJ.github.io"
+teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+breadcrumbs              : false # true, false (default)
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+talkmap_link             : false #change to true to add link to talkmap on talks page
+comments:
+  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  disqus:
+    shortname            :
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+staticman:
+  allowedFields          : ['name', 'email', 'url', 'message']
+  branch                 : "gh-pages" # "master", "gh-pages"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yml"
+  moderation             : true
+  path                   : "_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
+  transforms:
+    email                : "md5"
+  generatedFields:
+    date:
+      type               : "date"
+      options:
+        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+atom_feed:
+  path                   : # blank (default) uses feed.xml
 
-# Spanish
-# --------------
-es: &DEFAULT_ES
-  page                       : "Página"
-  pagination_previous        : "Anterior"
-  pagination_next            : "Siguiente"
-  breadcrumb_home_label      : "Inicio"
-  breadcrumb_separator       : "/"
-  toc_label                  : "Contenidos"
-  ext_link_label             : "Enlace"
-  less_than                  : "menos de"
-  minute_read                : "minuto de lectura"
-  share_on_label             : "Compartir"
-  meta_label                 :
-  tags_label                 : "Etiquetas:"
-  categories_label           : "Categorías:"
-  date_label                 : "Actualizado:"
-  comments_label             : "Comentar"
-  comments_title             :
-  more_label                 : "Ver más"
-  related_label              : "Podrías ver también"
-  follow_label               : "Seguir:"
-  feed_label                 : "Feed"
-  powered_by                 : "Powered by"
-  website_label              : "Sitio web"
-  email_label                : "Email"
-  recent_posts               : "Entradas recientes"
-  undefined_wpm              : "Parametro words_per_minute (Palabras por minuto) no definido en _config.yml"
-  comment_form_info          :
-  comment_form_comment_label :
-  comment_form_md_info       :
-  comment_form_name_label    :
-  comment_form_email_label   :
-  comment_form_website_label :
-  comment_btn_submit         :
-  comment_btn_submitted      :
-  comment_success_msg        :
-  comment_error_msg          :
-  loading_label              :
-es-ES:
-  <<: *DEFAULT_ES
-es-CO:
-  <<: *DEFAULT_ES
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
 
-# French
-# -----------------
-fr: &DEFAULT_FR
-  page                       : "Page"
-  pagination_previous        : "Précédent"
-  pagination_next            : "Suivant"
-  breadcrumb_home_label      : "Accueil"
-  breadcrumb_separator       : "/"
-  toc_label                  : "Sur cette page"
-  ext_link_label             : "Lien direct"
-  less_than                  : "plus petit que"
-  minute_read                : "minute de lecture"
-  share_on_label             : "Partager sur"
-  meta_label                 :
-  tags_label                 : "Tags :"
-  categories_label           : "Catégories :"
-  date_label                 : "Mis à jour :"
-  comments_label             : "Laisser un commentaire"
-  comments_title             :
-  more_label                 : "Lire plus"
-  related_label              : "Vous pourriez aimer"
-  follow_label               : "Suivez moi"
-  feed_label                 : "Flux"
-  powered_by                 : "Propulsé par"
-  website_label              : "Site"
-  email_label                : "Email"
-  recent_posts               : "Posts récents"
-  undefined_wpm              : "Le paramètre words_per_minute n'est pas défini dans _config.yml"
-  comment_form_info          :
-  comment_form_comment_label :
-  comment_form_md_info       :
-  comment_form_name_label    :
-  comment_form_email_label   :
-  comment_form_website_label :
-  comment_btn_submit         :
-  comment_btn_submitted      :
-  comment_success_msg        :
-  comment_error_msg          :
-  loading_label              :
-fr-FR:
-  <<: *DEFAULT_FR
-fr-BE:
-  <<: *DEFAULT_FR
-fr-CH:
-  <<: *DEFAULT_FR
+# Social Sharing
+weibo:
+  username               : 
+twitter:
+  username               : &twitter
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 :  # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
 
-# Turkish
-# -----------------
-tr: &DEFAULT_TR
-  page                       : "Sayfa"
-  pagination_previous        : "Önceki"
-  pagination_next            : "Sonraki"
-  breadcrumb_home_label      : "Ana Sayfa"
-  breadcrumb_separator       : "/"
-  toc_label                  : "İçindekiler"
-  ext_link_label             : "Doğrudan Bağlantı"
-  less_than                  : "Şu süreden az: "
-  minute_read                : "dakika tahmini okuma süresi"
-  share_on_label             : "Paylaş"
-  meta_label                 :
-  tags_label                 : "Etiketler:"
-  categories_label           : "Kategoriler:"
-  date_label                 : "Güncelleme tarihi:"
-  comments_label             : "Yorum yapın"
-  comments_title             :
-  more_label                 : "Daha fazlasını öğrenin"
-  related_label              : "Bunlar ilginizi çekebilir:"
-  follow_label               : "Takip et:"
-  feed_label                 : "RSS"
-  powered_by                 : "Emeği geçenler: "
-  website_label              : "Web sayfası"
-  email_label                : "E-posta"
-  recent_posts               : "Son yazılar"
-  undefined_wpm              : "_config.yml dosyasında tanımlanmamış words_per_minute parametresi"
-  comment_form_info          :
-  comment_form_comment_label :
-  comment_form_md_info       :
-  comment_form_name_label    :
-  comment_form_email_label   :
-  comment_form_website_label :
-  comment_btn_submit         :
-  comment_btn_submitted      :
-  comment_success_msg        :
-  comment_error_msg          :
-  loading_label              :
-tr-TR:
-  <<: *DEFAULT_TR
 
-# Brazilian Portguese
-# -----------------
-pt: &DEFAULT_PT
-  page                       : "Página"
-  pagination_previous        : "Anterior"
-  pagination_next            : "Próxima"
-  breadcrumb_home_label      : "Início"
-  breadcrumb_separator       : "/"
-  toc_label                  : "Nesta página"
-  ext_link_label             : "Link direto"
-  less_than                  : "menor que"
-  minute_read                : "minutos de leitura"
-  share_on_label             : "Compartilhe em"
-  meta_label                 :
-  tags_label                 : "Tags:"
-  categories_label           : "Categorias:"
-  date_label                 : "Atualizado em:"
-  comments_label             : "Deixe um comentário"
-  comments_title             :
-  more_label                 : "Aprenda Mais"
-  related_label              : "Talvez Você Goste Também"
-  follow_label               : "Acompanhe em"
-  feed_label                 : "Feed"
-  powered_by                 : "Feito por"
-  website_label              : "Site"
-  email_label                : "E-mail"
-  recent_posts               : "Postagens recentes"
-  undefined_wpm              : "Parâmetro indefinido em word_per_minute no _config.yml"
-  comment_form_info          : "Seu endereço de e-mail não será publicado. Campos obrigatórios são marcados"
-  comment_form_comment_label : "Comentário"
-  comment_form_md_info       : "Markdown é suportado"
-  comment_form_name_label    : "Nome"
-  comment_form_email_label   : "Endereço de e-mail'"
-  comment_form_website_label : "Website (opcional)"
-  comment_btn_submit         : "Enviar Comentário"
-  comment_btn_submitted      : "Enviado"
-  comment_success_msg        : "Obrigado por seu comentário! Ele será exibido no site depois de aprovado."
-  comment_error_msg          : "Desculpe, houve um erro com o seu envio. Certifique-se de que todos os campos obrigatórios foram preenchidos e tente novamente."
-  loading_label              : "Carregando..."
-pt-BR:
-  <<: *DEFAULT_PT
-pt-PT:
-  <<: *DEFAULT_PT
+# Analytics
+analytics:
+  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          :
 
-# Italian
-# -----------------
-it: &DEFAULT_IT
-  page                       : "Pagina"
-  pagination_previous        : "Precedente"
-  pagination_next            : "Prossima"
-  breadcrumb_home_label      : "Home"
-  breadcrumb_separator       : "/"
-  toc_label                  : "Indice della pagina"
-  ext_link_label             : "Link"
-  less_than                  : "meno di"
-  minute_read                : "minuto/i di lettura"
-  share_on_label             : "Condividi"
-  meta_label                 :
-  tags_label                 : "Tags:"
-  categories_label           : "Categorie:"
-  date_label                 : "Aggiornato:"
-  comments_label             : "Scrivi un commento"
-  comments_title             :
-  more_label                 : "Scopri di più"
-  related_label              : "Potrebbe Piacerti Anche"
-  follow_label               : "Segui:"
-  feed_label                 : "Feed"
-  powered_by                 : "Powered by"
-  website_label              : "Website"
-  email_label                : "Email"
-  recent_posts               : "Articoli Recenti"
-  undefined_wpm              : "Parametro words_per_minute non definito in _config.yml"
-  comment_form_info          :
-  comment_form_comment_label :
-  comment_form_md_info       :
-  comment_form_name_label    :
-  comment_form_email_label   :
-  comment_form_website_label :
-  comment_btn_submit         :
-  comment_btn_submitted      :
-  comment_success_msg        :
-  comment_error_msg          :
-  loading_label              :
-it-IT:
-  <<: *DEFAULT_IT
 
-# Another locale
-# --------------
+# Site Author
+author:
+  name             : "Your Sidebar Name"
+  avatar           : "profile.png"
+  bio              : "Your biography for the left-hand sidebar"
+  location         : "Location"
+  employer         :
+  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  googlescholar    : "http://yourfullgooglescholarurl.com"
+  email            :
+  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "academicpages"
+  google_plus      :
+  keybase          :
+  instagram        :
+  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  lastfm           :
+  linkedin         :
+  orcid            : "http://orcid.org/yourorcidurl"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  steam            :
+  tumblr           :
+  twitter          : "replacethistwitterhandle"
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+  wikipedia        :
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# Collections
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _teaching
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _talks
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+      author_profile: true
+      share: true
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Outputting
+permalink: /:categories/:title/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
+timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
+#     tag: /tags/:name/
+
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
