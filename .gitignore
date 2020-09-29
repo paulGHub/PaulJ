@@ -24,3 +24,10 @@ hs_err_pid*
 
 #idea file
 .idea/
+
+#jekyll生成的文件
+.jekyll-cache/
+_site/
+
+#jekyll学习资料
+jekyll_learning.txt
