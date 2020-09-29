@@ -167,11 +167,11 @@ This tag should denote <ins>inserted</ins> text.
 
 This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the `<code>` tag.
 
-    ### Preformatted Tag
+### Preformatted Tag
 
-    This tag styles large blocks of code.
-
-    <pre>
+This tag styles large blocks of code.
+    
+ <pre>
 .post-title {
   margin: 0 0 5px;
   font-weight: bold;
@@ -181,22 +181,22 @@ This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styl
 }
 </pre>
 
-    ### Quote Tag
+### Quote Tag
 
-    <q>Developers, developers, developers&#8230;</q> &#8211;Steve Ballmer
+<q>Developers, developers, developers&#8230;</q> &#8211;Steve Ballmer
 
-    ### Strong Tag
+### Strong Tag
 
-    This tag shows **bold text**.
+This tag shows **bold text**.
 
-    ### Subscript Tag
+### Subscript Tag
 
-    Getting our science styling on with H<sub>2</sub>O, which should push the "2" down.
+Getting our science styling on with H<sub>2</sub>O, which should push the "2" down.
 
-    ### Superscript Tag
+### Superscript Tag
 
-    Still sticking with science and Isaac Newton's E = MC<sup>2</sup>, which should lift the 2 up.
+Still sticking with science and Isaac Newton's E = MC<sup>2</sup>, which should lift the 2 up.
 
-    ### Variable Tag
+### Variable Tag
 
-    This allows you to denote <var>variables</var>.
+This allows you to denote <var>variables</var>.
