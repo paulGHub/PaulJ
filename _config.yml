@@ -160,9 +160,9 @@ whitelist:
 #  Path (examples)
 #  - Archive page should exist at path when using Liquid method or you can
 #    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
+#  - <base_path>/tags/my-awesome-tag/inssssdex.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/inssssdex.html ~> path: /categories/
+#  - <base_path/my-awesome-category/inssssdex.html ~> path: /
 #Liquid 是一门开源的模板语言，介绍：https://liquid.bootcss.com/basics/introduction/
 #加上下面的配置，才能识别模版中的{%%}语句
 #对象 告诉 Liquid 在页面的哪个位置展示内容。对象和变量名由双花括号标识：{{ 和 }}。
