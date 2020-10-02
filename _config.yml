@@ -6,6 +6,8 @@ title: "Paul / Private Site" # the name of your site, e.g. ACME Corp.
 author:
   name             : "paul"
   avatar           : "profile.png"
+  github           : "https://github.com/paulGHub"
+  email            : "paul@foxmail.com"
 # Reading Files
 include:
   - .htaccess
