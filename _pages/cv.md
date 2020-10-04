@@ -11,8 +11,8 @@ redirect_from:
 
 Education
 ======
-* B.S. in electric, CQUT, 2012
-* M.S. in electric, CQUT, 2016
+* B.Eng. in electric, CQUT, 2012
+* M.Eng. in electric, CQUT, 2016
 * Ph.D in electric, NCEPU, 2021 (expected)
 
 Work experience
